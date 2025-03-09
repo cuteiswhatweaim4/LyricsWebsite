@@ -1,0 +1,163 @@
+<!-- lyrics/song1-artist1.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Song 1 Lyrics - Artist 1</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .chord-buttons {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .chord-buttons button {
+      padding: 8px 15px;
+      margin-right: 10px;
+      cursor: pointer;
+      background-color: #ff6050;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      transition: transform 0.2s;
+    }
+    .chord-buttons button:hover {
+      transform: translateY(-2px);
+    }
+
+    .lyrics-container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .lyrics-content {
+      flex-grow: 1;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      font-size: 16px;
+      line-height: 1.6;
+      white-space: pre-wrap;
+    }
+
+    .side-image {
+      width: 200px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Song 1 - Artist 1</h1>
+</header>
+
+<main>
+  <a href="../artists/artist1.html" class="back-link">&larr; Back to Songs</a>
+
+  <div class="chord-buttons">
+    <button onclick="showLyrics('guitar')">🎸 Guitar Chords</button>
+    <button onclick="showLyrics('piano')">🎹 Piano Chords</button>
+    <button onclick="showLyrics('lyrics')">🚫 No Chords</button>
+  </div>
+
+  <div class="lyrics-container">
+    <img src="../images/skywayavenue-left.jpg" alt="Album Cover" class="side-image">
+
+    <div class="lyrics-content">
+      <pre id="guitar" style="display:none;">
+[Guitar chords and lyrics here]
+    </pre>
+
+    <pre id="piano" style="display:none;">
+[Piano chords and lyrics here]
+    </pre>
+
+    <pre id="lyrics">
+<!--[Lyrics only, without chords here]-->
+
+"Skyway Avenue"
+
+She said lets change our luck
+This night is all we've got
+Drive fast until
+We crash this dead-end life
+Sweet dreams that won't come true
+I'd leave it all for you
+Brick walls are closing in
+Let's make a run tonight
+
+[Chorus:]
+Blinded by the lights
+Hold you through forever
+Won't let you go
+'Cause if you jump I will jump too
+We will fall together from the buildings ledge
+Never looking back at what
+We've done
+We'll say it was love
+'Cause I would die for you on Skyway Avenue
+
+She said don't change your mind
+Let's leave this town behind
+We'll race right off the cliff
+They will remember this
+It all got so mundane
+With you I'm back again
+Just take me by the hand
+We're close to the edge
+
+[Chorus:]
+Blinded by the lights
+Hold you through forever
+Won't let you go
+'Cause if you jump I will jump too
+We will fall together from the buildings ledge
+Never looking back at what
+We've done
+We'll say it was love
+'Cause I would die for you on Skyway Avenue
+
+Where are your guts to fly?
+Soaring through, through the night
+And if you take that last step
+I'll follow you
+Leave the ledge and fly
+We're finally alive
+
+Cause if you jump, I will jump too
+We will fall together from the buildings ledge
+Never looking back at what we've done
+We'll say it was love
+Cause I would die for you on Skyway Avenue
+So what's left to prove
+We have made it through
+
+Writer(s): Dave Katz, Sam Hollander, Travis Clark
+    </pre>
+  </div>
+
+  <img src="../images/skywayavenue-right.jpg" alt="Artist Photo" class="side-image">
+
+</main>
+
+<footer>
+  &copy; 2025 Peter's Lyrics Website
+</footer>
+
+<script>
+function showLyrics(type) {
+  document.querySelectorAll('.lyrics-container pre').forEach(el => el.style.display = 'none');
+  document.getElementById(type).style.display = 'block';
+}
+
+// Initially show lyrics only
+showLyrics('lyrics');
+</script>
+
+</body>
+</html>
